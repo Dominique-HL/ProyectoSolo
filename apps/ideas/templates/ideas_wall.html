@@ -13,19 +13,15 @@
 		<link 
 		rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		{% load static %}
-		<link rel="stylesheet" href="{% static 'all_styles/styles.css' %}" />
-		<script src="{% static 'all_js/js-scripts.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+		<script src="{% static 'scripts/js-scripts.js' %}"></script>
 	</head>
 	<body>
 		<div class="container">
 			<nav class="navbar navbar-light bg-light mb-5">
 				<a class="navbar-brand" href="#">
 					{% load static %}
-					<img
-						src="{% static 'all_images/logo2.png' %}"
-						class="d-inline-block align-top"
-						alt="logo"
-					/>
+					<img src="{% static 'images/logo.png' %}" class="d-inline-block align-top" alt="logo"/>
 					<span class="brand_name navbar-text">Bright Ideas</span>
 				</a>
 				<span class="navbar-text greeting">
@@ -47,11 +43,8 @@
 
 					<button
 						type="submit"
-						class="btn btn-secondary-dark btn-secondary"
-					>
-						Idea!
-					</button>
-				</div>
+						class="btn btn-secondary-dark btn-secondary">Idea!</button>
+		</div>
 			</form>
 			{% if messages %} {% for message in messages %} 
 			{%if "no_more_likes" in message.tags %}
